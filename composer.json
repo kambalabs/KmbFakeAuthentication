@@ -15,7 +15,8 @@
         }
     ],
     "require": {
-        "kambalabs/kmb-authentication": "dev-master"
+        "kambalabs/kmb-authentication": "dev-master",
+        "kambalabs/kmb-domain": "dev-master"
     },
     "require-dev": {
         "phpunit/PHPUnit": "3.7.*",

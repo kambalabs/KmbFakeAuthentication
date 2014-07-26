@@ -1,7 +1,7 @@
 <?php
 namespace KmbFakeAuthentication\Adapter;
 
-use KmbAuthentication\Model\User;
+use KmbDomain\Model\User;
 use Zend\Authentication\Adapter\AdapterInterface;
 use Zend\Authentication\Result;
 
