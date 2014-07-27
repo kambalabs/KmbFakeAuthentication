@@ -2,16 +2,17 @@
 namespace KmbFakeAuthentication\Adapter;
 
 use KmbDomain\Model\User;
+use KmbDomain\Model\UserInterface;
 use Zend\Authentication\Adapter\AdapterInterface;
 use Zend\Authentication\Result;
 
 class Fake implements AdapterInterface
 {
     public static $resultCode = Result::SUCCESS;
-    public static $login = 'goten4';
-    public static $name = 'Emmanuel BOUTON';
-    public static $email = 'goten4@gmail.com';
-    public static $role = 'root';
+    public static $login = 'jdoe';
+    public static $name = 'John DOE';
+    public static $email = 'jdoe@gmail.com';
+    public static $role = UserInterface::ROLE_ROOT;
 
     /**
      * Performs an authentication attempt
@@ -21,6 +22,6 @@ class Fake implements AdapterInterface
      */
     public function authenticate()
     {
-        return new Result(static::$resultCode, new User(static::$login, static::$name, static::$email, [static::$role]));
+        return new Result(static::$resultCode, new User(static::$login, static::$name, static::$email, static::$role));
     }
 }
