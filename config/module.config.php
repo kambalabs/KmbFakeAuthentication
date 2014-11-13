@@ -15,9 +15,11 @@ return [
     'service_manager' => [
         'invokables' => [
             'KmbFakeAuthentication\Adapter\Fake' => 'KmbFakeAuthentication\Adapter\Fake',
+            'KmbFakeAuthentication\Listener\Fake' => 'KmbFakeAuthentication\Listener\Fake',
         ],
         'aliases' => [
-            'KmbAuthentication\Adapter' => 'KmbFakeAuthentication\Adapter\Fake',
+            'kmbAuthAdapter' => 'KmbFakeAuthentication\Adapter\Fake',
+            'kmbAuthListener' => 'KmbFakeAuthentication\Listener\Fake',
         ]
     ],
 ];
