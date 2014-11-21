@@ -27,7 +27,7 @@ use Zend\Mvc\MvcEvent;
 
 class Fake extends AbstractAuthenticationListener
 {
-    public function onDispatch(MvcEvent $event)
+    public function authenticate(MvcEvent $event)
     {
         $serviceManager = $event->getApplication()->getServiceManager();
 
